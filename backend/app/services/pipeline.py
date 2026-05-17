@@ -48,7 +48,7 @@ class SurveillancePipeline:
         height       = int(cap.get(cv2.CAP_PROP_FRAME_HEIGHT))
         total_frames = int(cap.get(cv2.CAP_PROP_FRAME_COUNT))
 
-        fourcc = cv2.VideoWriter_fourcc(*"mp4v")
+        fourcc = cv2.VideoWriter_fourcc(*"avc1")
         out    = cv2.VideoWriter(output_path, fourcc, fps, (width, height))
 
         # Reset all services for fresh video
@@ -172,3 +172,5 @@ class SurveillancePipeline:
                         cv2.FONT_HERSHEY_SIMPLEX, 0.5, color, 1)
 
         return ann
+
+
